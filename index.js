@@ -64,7 +64,14 @@ function register(regusername, regpassword, regname, regemail){
     console.log("Registration Successful with the Username:", regusername);}
 }
 
+//To login all the element in the dbUsers
+function login_all(){
+    dbUsers.find(element => 
+        console.log(element)) 
+}
+
 //try to register
 register("goh","passwordgoh","goh jia xuan","gjx@gmail.com")
 register("goh","passwordgoh","goh jia xuan","gjx@gmail.com")
-console.log(login("goh", "passwordgoh"));
+// console.log(login("goh", "passwordgoh"));
+login_all();
