@@ -44,6 +44,26 @@ function login(username, password){
 }
 
 //try to login
-console.log(login("lee", "passwordlee")); 
-console.log(login("hee", "passwordhee")); 
+// console.log(login("lee", "passwordlee")); 
+// console.log(login("hee", "passwordhee")); 
 //login("lee", "123456")
+
+function register(regusername, regpassword, regname, regemail){
+    //TODO: Check if username exist
+    let regmatched = dbUsers.find(element =>
+        element.username == regusername)
+        if(regmatched){
+            console.log("user existed");
+        }else {
+    dbUsers.push({
+        username: regusername,
+        password: regpassword,
+        name: regname,
+        email :regemail
+    })}
+}
+
+//try to register
+register("goh","passwordgoh","goh jia xuan","gjx@gmail.com")
+register("goh","passwordgoh","goh jia xuan","gjx@gmail.com")
+console.log(login("goh", "passwordgoh"));
