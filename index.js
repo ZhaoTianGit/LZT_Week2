@@ -60,7 +60,8 @@ function register(regusername, regpassword, regname, regemail){
         password: regpassword,
         name: regname,
         email :regemail
-    })}
+    })
+    console.log("Registration Successful with the Username:", regusername);}
 }
 
 //try to register
